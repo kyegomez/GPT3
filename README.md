@@ -3,15 +3,20 @@
 
 # GPT-3: Few-Shot Learning for Language Models
 
-Welcome to the repository for GPT-3: Few-Shot Learning for Language Models! This repository provides code examples and insights related to the groundbreaking paper "Language Models are Few-Shot Learners" by Tom B. Brown et al. Explore the potential of GPT-3, a language model with 175 billion parameters, and its remarkable few-shot learning capabilities. Below, we provide an overview of key concepts, practical code snippets, and the paper's findings.
 
-## Introduction
 
-In recent years, Natural Language Processing (NLP) has witnessed remarkable progress through pre-training language models on vast text corpora and fine-tuning them for specific tasks. However, these models still demand substantial task-specific data to excel. This paper introduces a paradigm shift by unveiling the concept of few-shot learning for language models. Discover how the scale of the model impacts its performance, akin to humans learning from just a few examples or simple instructions.
+
+## 💻 Installation
+
+`pip install gpt3`
+
+---
+
 
 ## Code Example
 
 Here's an illustrative code snippet that showcases GPT-3 in action:
+
 
 ```python
 import torch
@@ -26,6 +31,45 @@ model = GPT3()
 # Pass the input sequence through the model
 output = model(x)
 ```
+
+
+### 📚 Training
+
+```python
+from gpt3 import train
+
+train()
+
+```
+
+For further instructions, refer to the [Training SOP](DOCs/TRAINING.md).
+
+
+1. Set the environment variables:
+   - `ENTITY_NAME`: Your wandb project name
+   - `OUTPUT_DIR`: Directory to save the weights (e.g., `./weights`)
+   - `MASTER_ADDR`: For distributed training
+   - `MASTER_PORT` For master port distributed training
+   - `RANK`- Number of nodes services
+   - `WORLD_SIZE` Number of gpus
+
+2. Configure the training:
+   - Accelerate Config
+   - Enable Deepspeed 3
+   - Accelerate launch train_distributed_accelerate.py
+
+For more information, refer to the [Training SOP](DOCs/TRAINING.md).
+
+
+
+
+---
+
+Welcome to the repository for GPT-3: Few-Shot Learning for Language Models! This repository provides code examples and insights related to the groundbreaking paper "Language Models are Few-Shot Learners" by Tom B. Brown et al. Explore the potential of GPT-3, a language model with 175 billion parameters, and its remarkable few-shot learning capabilities. Below, we provide an overview of key concepts, practical code snippets, and the paper's findings.
+
+## Introduction
+
+In recent years, Natural Language Processing (NLP) has witnessed remarkable progress through pre-training language models on vast text corpora and fine-tuning them for specific tasks. However, these models still demand substantial task-specific data to excel. This paper introduces a paradigm shift by unveiling the concept of few-shot learning for language models. Discover how the scale of the model impacts its performance, akin to humans learning from just a few examples or simple instructions.
 
 ## Methodology
 
