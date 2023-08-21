@@ -5,12 +5,12 @@ from gpt3.model import Transformer, Decoder, AutoregressiveWrapper
 
 class GPT3(nn.Module):
     def __init__(self,
-                 num_tokens,
-                 max_seq_len,
-                 dim,
-                 depth,
-                 heads,
-                 attn_dim_head):
+                 num_tokens=50477,
+                 max_seq_len=4096,
+                 dim=12288,
+                 depth=96,
+                 heads=96,
+                 attn_dim_head=128):
         super().__init__()
 
         self.model = Transformer(
