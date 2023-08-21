@@ -8,7 +8,7 @@
 
 ## 💻 Installation
 
-`pip install gpt3`
+`pip install gpt3-torch`
 
 ---
 
