@@ -42,6 +42,7 @@ from transformers import (
 
 from gpt3.model import Transformer
 from gpt3.gpt3 import GPT3
+from gpt3.utils.stable_adam import StableAdamWUnfused
 
 # state = AcceleratorState()
 
