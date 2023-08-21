@@ -1,3 +1,6 @@
+[![Multi-Modality](agorabanner.png)](https://discord.gg/qUtxnK2NMf)
+
+
 # GPT-3: Few-Shot Learning for Language Models
 
 Welcome to the repository for GPT-3: Few-Shot Learning for Language Models! This repository provides code examples and insights related to the groundbreaking paper "Language Models are Few-Shot Learners" by Tom B. Brown et al. Explore the potential of GPT-3, a language model with 175 billion parameters, and its remarkable few-shot learning capabilities. Below, we provide an overview of key concepts, practical code snippets, and the paper's findings.
