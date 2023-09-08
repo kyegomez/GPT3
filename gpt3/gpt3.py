@@ -1,16 +1,18 @@
 from torch.nn import nn
-from gpt3.model import Transformer, Decoder, AutoregressiveWrapper
-
+# from gpt3.model import Transformer, Decoder, AutoregressiveWrapper
+from zeta.nn.architecture.transformer import Transformer, Decoder, AutoregressiveWrapper
 
 
 class GPT3(nn.Module):
-    def __init__(self,
-                 num_tokens=50477,
-                 max_seq_len=4096,
-                 dim=12288,
-                 depth=96,
-                 heads=96,
-                 attn_dim_head=128):
+    def __init__(
+            self,
+            num_tokens=50477,
+            max_seq_len=4096,
+            dim=12288,
+            depth=96,
+            heads=96,
+            attn_dim_head=128
+        ):
         super().__init__()
 
         self.model = Transformer(
@@ -24,5 +26,6 @@ class GPT3(nn.Module):
         ).cuda()
 
         self.model = AutoregressiveWrapper(self.model)
+
     def forward(self, text, **kwargs):
         return self.model(text)
