@@ -1,6 +1,6 @@
-from torch.nn import nn
+from torch import nn
 # from gpt3.model import Transformer, Decoder, AutoregressiveWrapper
-from zeta.nn.architecture.transformer import Transformer, Decoder, AutoregressiveWrapper
+from zeta import Transformer, Decoder, AutoregressiveWrapper
 
 
 class GPT3(nn.Module):
