@@ -4,7 +4,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
 name = "gpt3-torch"
-version = "0.0.6"
+version = "0.0.9"
 description = "GPT3 - Pytorch"
 authors = ["Kye Gomez <kye@apac.ai>"]
 license = "MIT"

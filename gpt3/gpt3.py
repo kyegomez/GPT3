@@ -15,6 +15,13 @@ class GPT3(nn.Module):
         ):
         super().__init__()
 
+        self.num_tokens = num_tokens
+        self.max_seq_len = 4096
+        self.dim = dim
+        self.depth = depth
+        self.heads = heads
+        self.attn_dim_head = attn_dim_head
+
         self.model = Transformer(
             num_tokens=self.num_tokens,
             max_seq_len=self.max_seq_len,
